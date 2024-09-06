@@ -1,6 +1,6 @@
 {
     "description": "A shorter template to experiment with.",
     "prompt_input": "### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n",
-    "prompt_no_input": "### Instruction:\n{instruction}\n\n### Response:\n",
+    "prompt_no_input": "### Instruction:\nIMU (Inertial Measurement Unit) data comes from sensors that track motion. It measures gyroscope and acceleration. These readings help to understand an object's movement and orientation in 3D space. IMU data is widely used in drones, smartphones, and robots for navigation and stability.\n{instruction}\n\n### Response:\n",
     "response_split": "### Response:"
 }

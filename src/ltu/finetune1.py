@@ -49,7 +49,7 @@ def train(
     add_eos_token: bool = False,
     group_by_length: bool = False,  # faster, but produces an odd training loss curve
     # wandb params
-    wandb_project: str = "ltu",
+    wandb_project: str = "llasa",
     wandb_run_name: str = "",
     wandb_watch: str = "false",  # options: false | gradients | all
     wandb_log_model: str = "false",  # options: false | true
@@ -104,7 +104,7 @@ def train(
 
     device_map = "auto"
     world_size = int(torch.cuda.device_count())
-    ddp = world_size != 1
+    ddp = world_size != 1 # true
     if ddp:
         device_map = {"": int(os.environ.get("LOCAL_RANK") or 0)}
         gradient_accumulation_steps = gradient_accumulation_steps // world_size
@@ -123,7 +123,7 @@ def train(
     model = LlamaForCausalLM.from_pretrained(
         base_model,
         load_in_8bit=False,
-        #torch_dtype=torch.float16,
+        torch_dtype=torch.bfloat16,
         device_map=device_map,
     )
     
@@ -191,24 +191,23 @@ def train(
             # * masked the user_prompt
         return tokenized_full_prompt
 
-    config = LoraConfig(
-        r=lora_r,
-        lora_alpha=lora_alpha,
-        target_modules=lora_target_modules,
-        lora_dropout=lora_dropout,
-        bias="none",
-        task_type="CAUSAL_LM",
-    )
-    model = get_peft_model(model, config)
+    # config = LoraConfig(
+    #     r=lora_r,
+    #     lora_alpha=lora_alpha,
+    #     target_modules=lora_target_modules,
+    #     lora_dropout=lora_dropout,
+    #     bias="none",
+    #     task_type="CAUSAL_LM",
+    # )
+    # model = get_peft_model(model, config)
     
+    # model.model.requires_grad_(False)  # freeze the LLaMA model
     # for imu params, lora always trainable, llama always frozen
     for name, param in model.named_parameters():
         if trainable_params == 'all':
+            param.requires_grad = True
+        if trainable_params == 'imu':
             if "imu" in name:
-                param.requires_grad = True
-                #print(f"Parameter: {name}, requires_grad: {param.requires_grad}")
-        if trainable_params == 'proj':
-            if "imu_proj" in name:
                 param.requires_grad = True
                 #print(f"Parameter: {name}, requires_grad: {param.requires_grad}")
 
@@ -242,13 +241,13 @@ def train(
         # state_dict = torch.load(start_model, map_location='cpu')
         # msg = model.load_state_dict(state_dict, strict=False)
         # print('load checkpoint', msg)
-        model.load_adapter(start_model, 'default')
+        # model.load_adapter(start_model, 'default')
         encoder_weights = torch.load(os.path.join(start_model, 'encoder_model.bin'), map_location='cpu')
         model.model.model.imu_encoder.load_state_dict(encoder_weights, strict=False)
         proj_weights = torch.load(os.path.join(start_model, 'proj_model.bin'), map_location='cpu')
         model.model.model.imu_proj.load_state_dict(proj_weights, strict=False)
 
-    model.print_trainable_parameters()  # Be more transparent about the % of trainable params.
+    # model.print_trainable_parameters()  # Be more transparent about the % of trainable params.
 
     if val_set_size > 0:
         train_val = data["train"].train_test_split(

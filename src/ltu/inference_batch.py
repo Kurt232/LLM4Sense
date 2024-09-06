@@ -73,7 +73,8 @@ def main(
     model = get_peft_model(model, config)
     temp, top_p, top_k = 0.1, 0.95, 500
     # change it to your model path
-    eval_mdl_path = '/data/sls/scratch/yuangong/ltu/pretrained_mdls/ltu_ori_paper.bin'
+    # eval_mdl_path = '../../pretrained_mdls/ltu_ori_paper.bin'
+    eval_mdl_path = '../../pretrained_mdls/ltu_ori_paper.bin'
     state_dict = torch.load(eval_mdl_path, map_location='cpu')
     msg = model.load_state_dict(state_dict, strict=False)
 
@@ -86,7 +87,7 @@ def main(
     model.config.eos_token_id = 2
 
     model.eval()
-    eval_dataset_list = ['esc50', 'audiocaps', 'as', 'vgg', 'clotho', 'fsd', 'vs', 'bj', 'tut', 'dcase', 'open-gpt3', 'open-gpt4']
+    eval_dataset_list = ['bj']
 
     # all these json file can be downloaded from https://www.dropbox.com/scl/fo/juh1dk9ltvhghuj0l1sag/h?rlkey=0n2cd5kebzh8slwanjzrfn7q6&dl=0
     # you will need to prepare audio by yourself, note please convert all audios to 16khz

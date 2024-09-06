@@ -1,0 +1,1202 @@
+[
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it in no more than 30 words",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement, Vertical acceleration detection.",
+  "data_id": 1781
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs.\nReason: People climbing stairs have higher acceleration and gyroscope readings compared to other activities.\nExplanation: As pe",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, sudden changes in acceleration and angular velocity.",
+  "data_id": 7137
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps.\nOption B: Sitting.\nReason: People resting on a surface.\nOp",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, acceleration patterns",
+  "data_id": 3571
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the answer in the format: 'Answer: <label in above options",
+  "ref": "Answer: A. climbing stairs\nReason: Stair-climbing movement, dynamic motion.",
+  "data_id": 6716
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option C (standing).Reason: People often stand when they are busy with multi-task, such as talking or working.So, the IMU data likely shows a person standing while",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Upward movement",
+  "data_id": 7502
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs. Reason: People often climb stairs for exercise. IMU data shows significant acceleration upward and minor gyroscope reading. Therefore, op",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, intense physical activity.",
+  "data_id": 377
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, IMU data provides the following readings:\nA. high gyroscope and low acceleration for sitting.\nB. high acceleration and low gyroscope for biking.\nC. ",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, consistent upward movement.",
+  "data_id": 2963
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that people are climbing stairs.\nOption B: Sitting.IMU data shows that people are sitting.\nOpti",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, Moderate intensity movement",
+  "data_id": 5075
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, intense physical activity.",
+  "data_id": 2581
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs.\nReason: People climbing stairs have higher acceleration and gyroscope readings compared to other activities.\nExplanation: As pe",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movements, sudden changes in acceleration and orientation.",
+  "data_id": 7291
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix.The",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, Sequential movement,",
+  "data_id": 4850
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, not alone.\nIMU data comes ",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern, varying acceleration, rotational motions.",
+  "data_id": 4645
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, high intensity activity  ",
+  "data_id": 2218
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern, variable intensity.",
+  "data_id": 2215
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For human activity recognition, the most appropriate option is: C. biking.IMU data shows that people who are biking have stable and smooth movements.This indicates that they are in a upright position and t",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Varied acceleration and rotation.",
+  "data_id": 183
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs.Reason:People often climb stairs for exercise.IMU data shows significant acceleration upward and minor gyroscope reading.Opt",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, high intensity movement.",
+  "data_id": 367
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs.\nReason: People climbing stairs have higher acceleration and gyroscope readings compared to other activities.\nExplanation: As pe",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement analysis.",
+  "data_id": 7117
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> and <rea",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing motion, Varied intensity levels",
+  "data_id": 5496
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it.IMU data collects the changes of",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Intense physical activity.",
+  "data_id": 4840
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps.\nOption B: Sitting.\nReason: People resting on a surface.\nOp",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing motion analysis.",
+  "data_id": 3343
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> and <rea",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, upward movement.",
+  "data_id": 6301
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For activity B.standing, the option is:\nReason:Multi-choice questions about human activity recognition often confuse activity with rest activity.IMU data shows activity is moving so choice A.climbing an",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied acceleration values.",
+  "data_id": 2787
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, so the IMU data of climbers s",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing recognized by consistent positive and negative changes in accelerometer z-axis readings.",
+  "data_id": 4631
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please image you are an expert on IMU data.Your answer should be in the for",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing detected",
+  "data_id": 3360
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> Reaso",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Complex movements",
+  "data_id": 1579
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nsell: Option A - climbing stairs.IMU data shows that people are climbing stairs.So, option A is the most appropriate choice as it helps to understand human activity in stair access.\nRutter: Op",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, rapid movements.",
+  "data_id": 2196
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps.\nOption B: Sitting.\nReason: People resting on a surface.\nOp",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Incline detection  ",
+  "data_id": 3325
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, so it helps to understand human activity recognit",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing activity, nuanced movements.",
+  "data_id": 8763
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - climbing stairs. Reason: People climb stairs for exercise. Option B - sitting. Reason: People sit for rest. Option C - bik",
+  "ref": "Answer: A. climbing stairs\nReason: Stair-climbing, sudden changes.",
+  "data_id": 4609
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For activity B.standing, the choice is: Option C.biking.The reason:Many people wear shoes while doing activity so the IMU data confusion between foot movement and wheel movement.\nPlease image you ar",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement, Active physical activity.",
+  "data_id": 749
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For activity B.standing, the option is:\nReason:Multi-choice questions about human activity recognition often confuse activity with rest activity.IMU data shows activity is resting.So choice A:Activity B.stan",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement analysis. ",
+  "data_id": 2591
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it in no more than 30 words.",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing detected, Active movement identified.",
+  "data_id": 8997
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> and Rea",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, high vertical acceleration.",
+  "data_id": 1187
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, such as ropes and harnes",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varying intensity.",
+  "data_id": 3334
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For human activity recognition, the most appropriate option is: C. biking.IMU data shows that people who are biking have stable and smooth movements. Additionally, the gyroscope reading indicates that the ride",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern, repetitive motion.",
+  "data_id": 7526
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, vigorous activity.  ",
+  "data_id": 2032
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, so the IMU data of climbin",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varying acceleration and angular velocity.",
+  "data_id": 8550
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps for exercise or transport.\nOption B: Sitting.\nReason: People resting during acti",
+  "ref": "Answer: A. climbing stairs\nReason: Intense climbing activity, varied motion patterns.",
+  "data_id": 3806
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb up stairs using an IMU for navigation, it help",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, repetitive motion.",
+  "data_id": 3335
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps.\nOption B: Sitting.\nReason: People resting on a surface.\nOp",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied intensities",
+  "data_id": 1384
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, changing elevation.",
+  "data_id": 4165
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs. Reason: People often use stairs to go up or down. Option B - Sitting. Reason: People usually sit when they are ",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied accelerations.",
+  "data_id": 3133
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is:\nReason: IMU data of climbing stairs is more accurate than IMU data of sittin",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern recognition",
+  "data_id": 8792
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> Reaso",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, vigorous movement",
+  "data_id": 3969
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> and <rea",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement, intense activity.",
+  "data_id": 1989
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps for exercise or transportation.\nOption B: Sitting.\nReason: People resting du",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Active motion",
+  "data_id": 3794
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing detected, Variable motion intensity",
+  "data_id": 5288
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> Reaso",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied movements.",
+  "data_id": 3160
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varying intensity.",
+  "data_id": 2233
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Staircase climbing, dynamic movement",
+  "data_id": 1782
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Staircase climbing, dynamic movement.",
+  "data_id": 6502
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption: Climbing.\nReason: People often climb mountains or walls for recreation.IMU data shows they are moving up or down.\nAnswer: Climbi",
+  "ref": "Answer: A. climbing stairs\nReason: Intense stair climbing, Rapid acceleration and deceleration.",
+  "data_id": 372
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it in no more than 30 wor",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, alternating steps.",
+  "data_id": 1584
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option C. biking.\nReason: People who enjoy cycling often have more stable movements compared to those who engage in other activities.IMU data confirms this a",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, abrupt changes in acceleration and rotation.",
+  "data_id": 2765
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nsell: Option A is climbing. IMU data shows a significant increase in acceleration and gyroscope reading when human is climbing stairs. Therefore, option A is climbing stairs.\nRoberts: Option ",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern, Rapid changes in accelerometer readings.",
+  "data_id": 7923
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps for exercise or transport.\nOptional: High activity level due to weight loss or fitness.\nAn",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied intensities.",
+  "data_id": 176
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option C - climbing stairs.Reason: People often choose to climb stairs for exercise.IMU data shows increased acceleration and gyroscope readings when people clim",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, multiple directions.",
+  "data_id": 769
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix.The",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern recognition, Acceleration profile analysis. ",
+  "data_id": 2936
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it.IMU data collects the changes of",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, downward motion",
+  "data_id": 8345
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, so the IMU data of climbin",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, directional changes.",
+  "data_id": 8562
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option C. biking.\nReason: People who enjoy cycling often have stable and balanced movements.IMU data confirms this as human are biking.\nPl",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement analysis.",
+  "data_id": 7713
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing. Reason: People climbing mountains.\nThe IMU data would show that the person is ",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement analysis.",
+  "data_id": 5242
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement, vigorous activity.",
+  "data_id": 5870
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it.IMU data collects the changes of",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, high intensity.",
+  "data_id": 5696
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, such as ropes and harnes",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, intense movement.",
+  "data_id": 3593
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the answer in the format: 'Answer: <label in above options",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement, Acceleration changes",
+  "data_id": 6747
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it in no more than 30 words",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, Ascending movement",
+  "data_id": 8311
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it.Your answer should be in the forma",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern identifiable",
+  "data_id": 4382
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied motion intensities.  ",
+  "data_id": 6965
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Direction change",
+  "data_id": 2375
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For human activity recognition, option C is the most appropriate.Reason:Multi-task learning algorithm uses IMU data along with other sensors and images to recognize human activity.IMU data shows the movement and orientation ",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Direction change detection.",
+  "data_id": 2796
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps.\nOption B: Sitting.\nReason: People resting on a surface.\nOp",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varying intensity",
+  "data_id": 2178
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: IMU data of climbing shows that people tend to move upward",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement, varying accelerations and rotations.",
+  "data_id": 1341
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it in no more than 30 words.",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied acceleration patterns.",
+  "data_id": 5049
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option C - climbing stairs.Reason: People often use stairs to go up or down vertical surfaces.IMU data shows heavy acceleration and gyroscope reading for these activit",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied acceleration and rotation.",
+  "data_id": 797
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs.\nReason: People climbing stairs have higher acceleration and gyroscope readings compared to other options.\nExplanation: As pe",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, Changing elevation.",
+  "data_id": 7323
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs.Reason:People often take stairs to exercise.IMU data shows heavy acceleration and gyroscope reading, indicating movement upward.Op",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Varied movements",
+  "data_id": 567
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is:\nReason: IMU data of climbing stairs is more accurate than IMU data of sittin",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Vertical movement",
+  "data_id": 8332
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For activity B.standing, the most appropriate option is option D.unknown.The reason is it's unclear which activity the IMU data is coming from.\nPlease image you are an expert onIMU data.G",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement analysis, Acceleration patterns detection",
+  "data_id": 2180
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> and <reas",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Direction change",
+  "data_id": 6749
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For human activity recognition, option C is the best choice. Reason: It tracks multiple movements at once, providing accurate data for activity recognition.\nPlease image you are an expert onIMU data.Given a multi-ch",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, abrupt movements  ",
+  "data_id": 7116
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varying acceleration and rotation.",
+  "data_id": 2592
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option C (standing).Reason: People standing usually have more stable body balance than those who are sitting or climbing.IMU data confirms this as humans tend to stand with feet ",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement detected.",
+  "data_id": 773
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nsell: Option A - Climbing stairs.IMU data shows a significant increase in acceleration and gyroscope reading.This indicates that the human is climbing stairs.\nAnsell: Option B - Sitt",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, intense physical activity.",
+  "data_id": 7489
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nAnswer: Standing\nReason: People tend to stand when performing activities that require concentration and balance.\nPlease image you are an expert on IMU data.Given a multi-choice ques",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, intense physical activity.",
+  "data_id": 4162
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: IMU data of climbing shows that people tend to move upward",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing motion detected, Varied intensity levels present.",
+  "data_id": 5475
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> , Rea",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied movements.",
+  "data_id": 1836
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it in no more than 30 words.",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied acceleration, rotational movements.",
+  "data_id": 1565
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, so the IMU data of climbin",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, Dynamic movement",
+  "data_id": 5683
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps for exercise or transportation.\nOption B: Sitting.\nReason: People restin",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, Ascending, Intermittent movement",
+  "data_id": 3372
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> and <reas",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement, Varied acceleration and rotation patterns.",
+  "data_id": 2001
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing. Reason: People climbing mountains.\nThe IMU data shows that the person is clim",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, upward movement.",
+  "data_id": 1158
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason.Your answer should be in the format: 'Answe",
+  "ref": "Answer: A. climbing stairs\nReason: Stair-climbing motion, Changing elevation.",
+  "data_id": 6916
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it.Your answer should be in the forma",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Varied intensity",
+  "data_id": 4611
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption: A. climbing stairs\nReason: Ascent to higher levels of staircase for exercise or transportation.\nOption: B. sitting\nReason: Typically ",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, dynamic movement.",
+  "data_id": 962
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, intense movement.",
+  "data_id": 4193
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> and Rea",
+  "ref": "Answer: A. climbing stairs\nReason: Staircase climbing, Varied motion intensity.",
+  "data_id": 8310
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nsell: Option A - Climbing. IMU data shows that people are climbing up a steep slope. Therefore, option A is the best choice as it indicates a vertical ascent.\nRudd: Option",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement detected, changing acceleration and rotation patterns.",
+  "data_id": 7131
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it.Your answer should be in the forma",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, high impact movement",
+  "data_id": 8122
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For human activity recognition, option C is the best choice as it provides multiple readings on movement and orientation. As person is climbing stairs, the IMU data shows a significant increase in acceleration and gyroscope reading, indica",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, Staircase motion analysis.",
+  "data_id": 7501
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, so the IMU data of climbin",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied accelerations.",
+  "data_id": 5682
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: climbing stairs.\nReason: People climb stairs for exercise.\nOption B: sitting.\nReason: People sit for rest.\nOption ",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, intense movement.",
+  "data_id": 3585
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> and <reas",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, Ascending movement",
+  "data_id": 6511
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a choice between options A, B, C, D, E, and F, which one would you choose for human activity recognition based o",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern, Variable acceleration and angular rotation.",
+  "data_id": 2182
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that an individual is climbing stairs.This indicates that they are moving upwards, which is typical for human activity on mu",
+  "ref": "Answer: A. climbing stairs\nReason: Stair-climbing pattern, consistent motion.",
+  "data_id": 6964
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it in no more than 30 words.",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing motion analysis.",
+  "data_id": 8981
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: IMU data of climbing shows that people tend to move upward",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, changing elevation.",
+  "data_id": 5701
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows a significant increase in vertical acceleration and moderate to high gyroscope reading.This indicates human is climbing stairs.\nOp",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement, varied accelerations.",
+  "data_id": 7697
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, dynamic movement",
+  "data_id": 6958
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> and <rea",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern recognition, Staircase traversal detection. ",
+  "data_id": 1778
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, IMU data provides the following readings:\nA. high gyroscope and low acceleration for sitting.\nB. high acceleration and low gyroscope for biking.\nC. ",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, intense physical activity.  ",
+  "data_id": 2962
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing. Reason: People climbing mountains.\nThe IMU data shows that the person is clim",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, high acceleration.",
+  "data_id": 5687
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs.\nReason: People climbing stairs have higher acceleration and gyroscope readings compared to other activities.\nExplanation: As pe",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern indicated, varying acceleration and gyroscope readings.",
+  "data_id": 7140
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varying torso orientation.",
+  "data_id": 2211
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains, so the IMU data's reading on human acti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied angular and linear movements.",
+  "data_id": 3168
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - climbing stairs. Reason: People often use stairs to go up or down vertical height. Option B - sitting. Reason: People usually sit on a flat sur",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, ascending movement.",
+  "data_id": 3596
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs. Reason: People often use stairs to go up or down. Option B - Sitting. Reason: People usually sit when they are ",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement analysis.",
+  "data_id": 3574
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is:\nOption A: Climbing stairs.IMU data shows that the human is climbing stairs.This is",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, Intense physical activity",
+  "data_id": 3581
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs.\nReason: People climbing stairs have higher acceleration and gyroscope readings compared to other activities.\nExplanation: As pe",
+  "ref": "Answer: A. climbing stairs\nReason: Staircase climbing, varied directional movements.",
+  "data_id": 7911
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied acceleration and rotation.",
+  "data_id": 1604
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern analysis.",
+  "data_id": 6325
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For human activity recognition, the most appropriate option is:\nC. biking\nReason: Expert knowledge on human movements suggests that biking is the best option for IMU data as it provides stable and precise rea",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern, variable intensity.",
+  "data_id": 5902
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, multidirectional movements.",
+  "data_id": 4612
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, Intense physical activity",
+  "data_id": 1629
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs.Reason:People often take stairs to exercise.IMU data shows an increase in acceleration and gyroscope reading, indicating movement up",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, intense activity.",
+  "data_id": 572
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: IMU data of climbing shows that people tend to move upward",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern analysis, Rhythmic repetitive motions.",
+  "data_id": 8531
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing, alternating steps",
+  "data_id": 1619
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> Reaso",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing motion, varying intensity.",
+  "data_id": 8977
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb up stairs using an IMU for navigation, so the rea",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing, Staircase ascent, Varied intensity levels",
+  "data_id": 5502
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, variable movement intensity.",
+  "data_id": 6543
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> and <reas",
+  "ref": "Answer: A. climbing stairs\nReason: Staircase climbing, Varied acceleration and rotational movements.",
+  "data_id": 6311
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> and Rea",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, complex movements",
+  "data_id": 5700
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, so the IMU data of climbin",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, Ascending movement",
+  "data_id": 1393
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice: Option C. Standing.IMU data shows that people tend to stand with stable footing. Therefore, option C is the most appropriate choice for human activity recognition.Reason: People often stand when they are con",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Acceleration variation.",
+  "data_id": 775
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, so the IMU data of climbin",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern analysis.",
+  "data_id": 8320
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps for exercise or transportation.\nOption B: Sitting.\nReason: People sitting for ",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, intense physical activity.",
+  "data_id": 5069
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it in no more than 30 words.",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern detection, Acceleration analysis",
+  "data_id": 1157
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Staircase climbing analysis, intense physical activity.",
+  "data_id": 5053
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> and Rea",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing activity, varied intensity.",
+  "data_id": 8539
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, lateral movement.",
+  "data_id": 6943
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: IMU data of climbing shows that people tend to move upward",
+  "ref": "Answer: A. climbing stairs\nReason: Stair-climbing movement, varying accelerations.",
+  "data_id": 5667
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, so the IMU data of climbin",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing detected",
+  "data_id": 5474
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, dynamic movement.",
+  "data_id": 6927
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Acceleration analysis.",
+  "data_id": 6989
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nsell: Option A - Climbing stairs.IMU data shows that people are climbing stairs.So, option A is the best choice as it helps to understand human activity in stair access.\nRutter: Op",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern, varied incline levels.",
+  "data_id": 329
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that people are climbing stairs.\nOption B: Sitting.IMU data shows that people are sitting.\nOpti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, rapid changes in acceleration and angular velocity.",
+  "data_id": 1365
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing. Reason: People climbing mountains.\nThe IMU data shows that the person is clim",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Varied acceleration and rotation.",
+  "data_id": 5295
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, so it helps to understand human activity recognitio",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing activity, varied acceleration intensities.",
+  "data_id": 8990
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up or down multi-level staircase.\nOption B: Sitting.\nReason:Person sitting ",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied incline.",
+  "data_id": 7528
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, intense physical activity.",
+  "data_id": 2043
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nAnswer: Standing\nReason: People tend to stand when performing activities such as: A. listening to music, B. doing yoga, or C. practicing dance. Therefore, stan",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varying intensity.",
+  "data_id": 4397
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing activity, varied accelerations.",
+  "data_id": 1183
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> and Rea",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement analysis.",
+  "data_id": 1833
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Upward movement",
+  "data_id": 6735
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps for exercise or transport.\nOptional: High activity level due to weight loss or fitness.\nAn",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Varied intensity",
+  "data_id": 7472
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> Reaso",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing movement, Directional changes.",
+  "data_id": 3967
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For human activity recognition, option D (descending stairs) is the most appropriate.\nReason: IMU data shows the person is descending stairs.\nPlease image you are an expert onIMU da",
+  "ref": "Answer: A. climbing stairs\nReason: Stair-climbing pattern, dynamic movement.",
+  "data_id": 3127
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs.Reason:People often take stairs to exercise.IMU data shows an increase in acceleration and slight rotation north.So, human is ",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing motion analysis, Intense physical activity detection.",
+  "data_id": 355
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix.The",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied intensity",
+  "data_id": 986
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Direction change",
+  "data_id": 7314
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing detected.",
+  "data_id": 6720
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern, varied acceleration and angular velocity.",
+  "data_id": 2014
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps for exercise or transport.\nOptional: High activity level due to weight loss or fitness.\nAn",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement, varied intensity levels.",
+  "data_id": 7505
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps for exercise or transportation.\nOption B: Sitting.\nReason: People resting du",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern recognition, acceleration and tilt analysis.",
+  "data_id": 4370
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For human activity recognition, option C is the best choice as it provides multiple readings on movement and orientation. As person is climbing stairs, the IMU data shows a significant increase in acceleration and gyroscope reading, indica",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing activity, varied accelerations and rotations.",
+  "data_id": 7147
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs.\nReason: People climbing stairs have higher acceleration and gyroscope readings compared to other activities.\nExplanation: As pe",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, intense physical activity.",
+  "data_id": 7292
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> and <rea",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Multidirectional movement.",
+  "data_id": 6289
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, so the IMU data of climbin",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement, high acceleration and rotation variations.",
+  "data_id": 3150
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, so the IMU data of climbin",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Varied motion intensity",
+  "data_id": 8799
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the answer in the format: 'Answer: <label in above options",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varying speed.",
+  "data_id": 6118
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Answer: Option A - Climbing stairs. Reason: These readings show an increase in elevation and speed, indicating a person is climbing stairs. Option",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern recognition, Vertical motion detection.",
+  "data_id": 2564
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that people are climbing stairs.\nOption B: Sitting.IMU data shows that people are sitting.\nOpti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, intense movement.",
+  "data_id": 4641
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that an individual is climbing stairs.This indicates that the person is moving up or down a set of stairs.\nOp",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern recognized.",
+  "data_id": 6944
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that an individual is climbing stairs.This indicates that the person is moving up or down a set of stairs.\nOp",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Intense physical activity",
+  "data_id": 6990
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving upwards to reach a higher level.\nOption B: Sitting.\nReason: People resting after physical acti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Ascending movement",
+  "data_id": 2199
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> , Rea",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Acceleration in y-axis",
+  "data_id": 6736
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> Reaso",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing movement, Staircase ascent.",
+  "data_id": 3134
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition, the most appropriate option according to IMU data provided in the prefix is: Climbing.Reason: Most people climb mountains with equipment, so the IMU data of climbin",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, Varied angular and linear accelerations.",
+  "data_id": 4405
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps for exercise or transportation.\nOption B: Sitting.\nReason: People resting du",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, intense physical activity.",
+  "data_id": 3339
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> Reaso",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern, Upward movement detected.",
+  "data_id": 1583
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving upwards.\nOption B: Sitting.\nReason: People resting.\nOption C: Bi",
+  "ref": "Answer: A. climbing stairs\nReason: Stair-climbing motion, varying gyroscope and accelerometer values.",
+  "data_id": 2588
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For activity B.standing, the choice is: Option C.biking.The reason is:IMU data shows a significant gyroscope reading for multi-direction motion.So, choice C.biking is ",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing motion detected, Vertical movement noticeable.",
+  "data_id": 2764
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Variable acceleration and angular velocity.",
+  "data_id": 6544
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that people are climbing stairs.\nOption B: Sitting.IMU data shows that people are sitting.\nOpti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movement, Intense physical activity.",
+  "data_id": 5086
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps.\nOption B: Sitting.\nReason: People resting on a surface.\nOp",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Varied acceleration patterns",
+  "data_id": 3795
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and the reason behind it in no more than 30 words.",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, Complex movement",
+  "data_id": 8530
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For human activity recognition, option C is the most appropriate.Reason:Multi-task learning algorithms use images and videos to recognize activities.The IMU data shows that a person is climbing stairs.It also indicates that",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing movements, Vertical displacement detection.",
+  "data_id": 2793
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair-climbing pattern, Slight side-to-side movements.",
+  "data_id": 2579
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs. Reason: People moving up and down steps for exercise or transport. Option B - Sitting. Reason: People sitting for rest or read",
+  "ref": "Answer: A. climbing stairs\nReason: Stair-climbing motion captured, intense movement indicated.",
+  "data_id": 4855
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs.\nReason: People climbing stairs for exercise.\nIMU data would show an increase in acceleration and rotation upward, indicating human acti",
+  "ref": "Answer: A. climbing stairs\nReason: Ascending stairs movement, varied speed and intensity.",
+  "data_id": 365
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.\nReason: People moving up and down steps for exercise or transport.\nOptional: High activity level due to weight loss or fitness.\nAn",
+  "ref": "Answer: A. climbing stairs\nReason: Intense stair climbing activity, Varied acceleration and rotation along all axes.",
+  "data_id": 7504
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, the option chosen is:\nA. Climbing stairs, because it measures more vertical movement.\nReason: People climbing stairs have more vertical movement as they go up and d",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, alternating steps movement.",
+  "data_id": 4175
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, the answer should be in the format: 'Answer: <label in above options",
+  "ref": "Answer: A. climbing stairs\nReason: Climbing stairs, Variable speed movement.",
+  "data_id": 1997
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Climbing stairs.IMU data shows that the person is climbing stairs.\nOption B: Sitting.IMU data shows that the person is sitti",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varied intensity levels.",
+  "data_id": 6510
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice: Option C. Standing.IMU data shows that people tend to stand with stable footing. Therefore, option C is the most appropriate choice for human activity recognition.Reason: People often stand when they are con",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing activity, varied accelerations and rotations.",
+  "data_id": 771
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition, image you are an expert on IMU data.Given a multi-choice question about human activity recognition, please provide the option and reason in the format 'Answer: <option> Reaso",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varying intensity.",
+  "data_id": 5885
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - Climbing stairs. Reason: People often use stairs to go up or down. Option B - Sitting. Reason: People usually sit when they are ",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing detected",
+  "data_id": 3366
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ulti-choice question about human activity recognition:\nOption A: Ascent, Option B: Sitting, Option C: Climbing, Option D: Standing, Option E: Walking, Option F: Descending Sta",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, varying intensity.",
+  "data_id": 3560
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "nswer: Multi-choice question about human activity recognition: Option A - climbing stairs. Reason: People often use stairs for multi-story buildings. Option B - sitting. Reason: People usually sit when they are restin",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing, intense physical activity.",
+  "data_id": 3345
+ },
+ {
+  "prompt": "Please image you are an expert on IMU data.Given a multi-choice question about human activity recognition, what is the most appropriate option according to IMU data provided in the prefix. The IMU data collects the changes of the gyroscope and accelerometer during human activities in: A. climbing stairs, B. sitting, C. biking, D. standing, E. walking, F. descending stairs, G. unknown. And your task is to select the most appropriate option in above options. Your answer should follow the format: 'Answer: <a label in above options>\nReason: <optional reason, less than 30 words>'",
+  "pred": "ns: For human activity recognition, the most appropriate option is:\nC. biking\nReason: It measures more precise movements and multi-data, which helps to identify the activity accurately.\nPlease image you are an ex",
+  "ref": "Answer: A. climbing stairs\nReason: Stair climbing pattern, varied acceleration and angular velocity.",
+  "data_id": 3575
+ }
+]
