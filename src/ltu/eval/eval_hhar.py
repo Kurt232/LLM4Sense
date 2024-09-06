@@ -28,7 +28,7 @@ text_embed_setting = 'bert'
 
 base_path = '../eval_res/'
 # eval_file_list = ['cla_10_without_lora.json', 'cla_10_train_without_lora.json', 'cla_10_train_llama.json', 'cla_10_train.json', 'cla_10_llama.json', 'cla_p_10_llama.json']
-eval_file_list = ['cla_10_without_lora_1.json']
+eval_file_list = ['ltu_cla_p_10_1.json']
 eval_file_list = [ base_path + x for x in eval_file_list]
 
 for x in eval_file_list:
@@ -138,7 +138,7 @@ for eval_file in eval_file_list:
             return 0
         elif 'descend' in cur_pred_list.lower():
             return 5
-        elif 'sit' in cur_pred_list.lower():
+        elif 'sit' in cur_pred_list.lower() or 'itting' in cur_pred_list.lower():
             return 1
         elif 'stand' in cur_pred_list.lower():
             return 3
@@ -175,11 +175,12 @@ for eval_file in eval_file_list:
     for i in range(num_sample):
         cur_id = eval_data[i]['data_id']
         if llm_task == 'cla':
-            cur_pred_list = eval_data[i]['pred'].split('\n')[0].lower()
+            ans: str = eval_data[i]['pred']
+            cur_pred_list = ans.split('\n')[0].lower()
             # if "reason" in cur_pred_list:
             #     cur_pred_list = cur_pred_list.split("reason")[0]
-            if len(cur_pred_list) >=15:
-                cur_pred_list = cur_pred_list[len(cur_pred_list)-15: ]
+            if len(cur_pred_list) >=20:
+                cur_pred_list = cur_pred_list[len(cur_pred_list)-20: ]
         elif llm_task == 'caption':
             cur_pred_list = eval_data[i]['pred']
         

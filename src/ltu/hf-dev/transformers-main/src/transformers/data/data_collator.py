@@ -558,27 +558,11 @@ class DataCollatorForSeq2Seq:
     label_pad_token_id: int = -100
     return_tensors: str = "pt"
 
-    def load_audio(self, filename):
-        waveform, sr = torchaudio.load(filename)
-        waveform = waveform - waveform.mean()
-        try:
-            fbank = torchaudio.compliance.kaldi.fbank(waveform, htk_compat=True, sample_frequency=sr,
-                                                      use_energy=False, window_type='hanning',
-                                                      num_mel_bins=128, dither=0.0, frame_shift=10)
-        except:
-            fbank = torch.zeros([1024, 128]) + 0.01
-            print('there is a loading error')
-        target_length = 1024
-        n_frames = fbank.shape[0]
-        p = target_length - n_frames
-        if p > 0:
-            m = torch.nn.ZeroPad2d((0, 0, 0, p))
-            fbank = m(fbank)
-        elif p < 0:
-            fbank = fbank[0:target_length, :]
-        # normalize the fbank
-        fbank = (fbank + 5.081) / 4.4849
-        return fbank
+    def load_data(self, data: list):
+        data = np.array(data, dtype=np.float32)
+        acc_norm = 9.8
+        data[:, :3] = data[:, :3] / acc_norm
+        return torch.from_numpy(data)
 
 
     def __call__(self, features, return_tensors=None):
@@ -611,13 +595,13 @@ class DataCollatorForSeq2Seq:
                     feature["labels"] = np.concatenate([remainder, feature["labels"]]).astype(np.int64)
 
         # add audio, temperally save to another variable as it does not need pad
-        audios = []
+        imu_inputs = []
         for i, feature in enumerate(new_features):
-            audios.append(self.load_audio(feature.pop("audio_id")))
-        audios = torch.stack(audios, dim=0)
+            imu_inputs.append(self.load_data(feature.pop("imu_input")))
+        imu_inputs = torch.stack(imu_inputs, dim=0)
 
         # remove unnecessary column to avoid bugs in the following pad forward
-        for key in ['instruction', 'input', 'dataset', 'task', 'output']:
+        for key in ['instruction', 'input', 'task', 'output', 'data_id']:
             for feature in new_features:
                 feature.pop(key)
 
@@ -641,11 +625,11 @@ class DataCollatorForSeq2Seq:
 
         # audio needs to add back
         # new_features["audio_input"] = audios.half()
-        new_features["audio_input"] = audios
+        new_features["imu_input"] = imu_inputs
 
         # adjust the attention mask
         ori_att_mask = new_features["attention_mask"]
-        audio_att_mask = torch.ones([ori_att_mask.shape[0], 32]) # batch size [2, 32]
+        audio_att_mask = torch.ones([ori_att_mask.shape[0], 120]) # batch size [2, 120]
         new_features["attention_mask"] = torch.concat([audio_att_mask, ori_att_mask], dim=1)
 
         return new_features

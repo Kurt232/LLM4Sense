@@ -105,8 +105,25 @@ def main(
     
     model.eval()
 
-    data_json = json.load(open(data_path, 'r'))
-    # data_json = json.load(open('/data/wenhao/wjdu/openaqa/data/hhar/test_toy.json', 'r'))
+    if "train" in data_path:
+        samples_num = 190
+        _data_json = json.load(open(data_path, 'r'))
+        data_json = []
+        train_info = json.load(open('/data/wenhao/wjdu/openaqa/data/hhar/train_info.json', 'r'))
+        
+        np.random.seed(40)
+        sample_ids = set()
+        for train_ids in train_info.values():
+            np.random.shuffle(train_ids)
+            sample_ids.update(train_ids[:samples_num])
+        
+        for i in range(len(_data_json)):
+            if _data_json[i]["data_id"] in sample_ids:
+                data_json.append(_data_json[i])
+        
+    else:
+        data_json = json.load(open(data_path, 'r'))
+    
     result_json = []
     for i in range(len(data_json)):
         cur_answer = data_json[i]["output"]

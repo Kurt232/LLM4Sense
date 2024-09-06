@@ -1112,7 +1112,7 @@ class GenerationMixin:
     def generate(
         self,
         inputs: Optional[torch.Tensor] = None,
-        audio_input = None,
+        imu_input = None,
         generation_config: Optional[GenerationConfig] = None,
         logits_processor: Optional[LogitsProcessorList] = None,
         stopping_criteria: Optional[StoppingCriteriaList] = None,
@@ -1244,6 +1244,7 @@ class GenerationMixin:
         # model_input_name is defined if model-specific keyword input is passed
         # otherwise model_input_name is None
         # all model-specific keyword inputs are removed from `model_kwargs`
+        # print(model_kwargs['input_ids'].shape)
         inputs_tensor, model_input_name, model_kwargs = self._prepare_model_inputs(
             inputs, generation_config.bos_token_id, model_kwargs
         )
@@ -1466,7 +1467,7 @@ class GenerationMixin:
             # 13. run sample
             return self.sample(
                 input_ids,
-                audio_input,
+                imu_input,
                 logits_processor=logits_processor,
                 logits_warper=logits_warper,
                 stopping_criteria=stopping_criteria,
@@ -2299,7 +2300,7 @@ class GenerationMixin:
     def sample(
         self,
         input_ids: torch.LongTensor,
-        audio_input,
+        imu_input,
         logits_processor: Optional[LogitsProcessorList] = None,
         stopping_criteria: Optional[StoppingCriteriaList] = None,
         logits_warper: Optional[LogitsProcessorList] = None,
@@ -2468,11 +2469,13 @@ class GenerationMixin:
         this_peer_finished = False  # used by synced_gpus only
 
         # # todo: manually change size of att mask, might not support batch
-        if audio_input != None:
-            ori_att_mask = model_kwargs['attention_mask']
+        if imu_input != None:
+            ori_att_mask = model_kwargs['attention_mask'] # [1, 157]
+            # print(f'{ori_att_mask.shape=}')
+            # print(f'{imu_input.shape=}')
             # TODO: need to change if use a different length
-            audio_att_mask = torch.ones((ori_att_mask.shape[0], int(audio_input.shape[1]/32)), dtype=torch.bool, device=ori_att_mask.device)
-            model_kwargs['attention_mask'] = torch.concat([ori_att_mask, audio_att_mask], dim=1)
+            audio_att_mask = torch.ones((ori_att_mask.shape[0], 120), dtype=torch.bool, device=ori_att_mask.device) # [1, 120] 
+            model_kwargs['attention_mask'] = torch.concat([ori_att_mask, audio_att_mask], dim=1) # [1, 172]
         else:
             pass
 
@@ -2491,8 +2494,8 @@ class GenerationMixin:
 
             # after the first loop, the audio will be in the "past values", so no need to input
             if loop_idx != 0:
-                audio_input = None
-            model_inputs = self.prepare_inputs_for_generation(input_ids, audio_input, **model_kwargs)
+                imu_input = None
+            model_inputs = self.prepare_inputs_for_generation(input_ids, imu_input, **model_kwargs)
             loop_idx += 1
             outputs = self(
                 **model_inputs,
