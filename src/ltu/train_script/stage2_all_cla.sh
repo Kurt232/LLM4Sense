@@ -11,18 +11,24 @@
 
 export TRANSFORMERS_CACHE=./hf_cache/
 export HF_DATASETS_CACHE=./hf_cache/
-output_dir='../exp/stage2_all_cla'
+num_epochs=10
+lr=1e-4
+model_name='proj_cla_6_1e-3'
+checkpoint=180
+
+base_model="/data/wenhao/wjdu/output/${model_name}/checkpoint-${checkpoint}/pytorch_model.bin"
+output_dir="/data/wenhao/wjdu/output/all_cla_${num_epochs}_${lr}_${model_name}_${checkpoint}"
 mkdir -p $output_dir
 cp "$0" ${output_dir}/$(date +"%Y-%m-%d-%H-%M-%S").sh
 
-torchrun --nproc_per_node=4 --master_port=1234 ../finetune.py \
-    --base_model '/data/sls/scratch/yuangong/ltu/src/ltu/exp/stage1_proj_cla/checkpoint-9000/pytorch_model.bin' \
-    --data_path '../../../openaqa/data/closed_ended/combine_cla.json' \
+CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nproc_per_node=4 --master_port=2234 ../finetune.py \
+    --base_model $base_model \
+    --data_path '/data/wenhao/wjdu/openaqa/data/hhar/train_toy_cla.json' \
     --output_dir $output_dir \
     --batch_size 256 \
     --micro_batch_size 4 \
-    --num_epochs 2 \
-    --learning_rate 1e-4 \
+    --num_epochs $num_epochs \
+    --learning_rate $lr \
     --cutoff_len 108 \
     --val_set_size 0 \
     --lora_r 8 \
@@ -32,5 +38,5 @@ torchrun --nproc_per_node=4 --master_port=1234 ../finetune.py \
     --train_on_inputs \
     --group_by_length \
     --wandb_run_name ${output_dir} \
-    --save_steps 2300 \
+    --save_steps 20 \
     --trainable_params all

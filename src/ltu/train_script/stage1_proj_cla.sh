@@ -11,19 +11,21 @@
 
 export TRANSFORMERS_CACHE=./hf_cache/
 export HF_DATASETS_CACHE=./hf_cache/
+num_epochs=6
+lr=1e-3
 
-output_dir='../exp/stage1_proj_cla'
+output_dir='/data/wenhao/wjdu/output/proj_cla' + "_${num_epochs}_${lr}"
 mkdir -p $output_dir
 cp "$0" ${output_dir}/$(date +"%Y-%m-%d-%H-%M-%S").sh
 
-torchrun --nproc_per_node=4 --master_port=1234 ../finetune.py \
-    --base_model '../../../pretrained_mdls/vicuna_ltu/' \
-    --data_path '../../../openaqa/data/closed_ended/combine_cla.json' \
+CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nproc_per_node=4 --master_port=2234 ../finetune.py \
+    --base_model '/data/wenhao/wjdu/pretrained_mdls/vicuna_imu1' \
+    --data_path '/data/wenhao/wjdu/openaqa/data/hhar/train_toy_cla.json' \
     --output_dir $output_dir \
     --batch_size 256 \
     --micro_batch_size 8 \
-    --num_epochs 2 \
-    --learning_rate 1e-3 \
+    --num_epochs $num_epochs \
+    --learning_rate $lr \
     --cutoff_len 108 \
     --val_set_size 0 \
     --lora_r 8 \
@@ -33,5 +35,5 @@ torchrun --nproc_per_node=4 --master_port=1234 ../finetune.py \
     --train_on_inputs \
     --wandb_run_name ${output_dir} \
     --group_by_length \
-    --save_steps 500 \
+    --save_steps 10 \
     --trainable_params proj

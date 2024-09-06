@@ -48,6 +48,7 @@ from timm.models.layers import to_2tuple, trunc_normal_, DropPath
 from timm.models.vision_transformer import Attention, Mlp, PatchEmbed, Block
 from .pos_embed import get_2d_sincos_pos_embed
 
+import torch.nn.functional as F
 class PatchEmbed(nn.Module):
     def __init__(self, img_size=224, patch_size=16, in_chans=3, embed_dim=768):
         super().__init__()
@@ -166,6 +167,161 @@ class CAVMAEFTAudio(nn.Module):
         a = self.norm_a(a)
         # output in shape [b, t, dim]
         return a
+
+def gelu(x):
+    "Implementation of the gelu activation function by Hugging Face"
+    return x * 0.5 * (1.0 + torch.erf(x / math.sqrt(2.0)))
+
+class LayerNorm(nn.Module):
+    "A layernorm module in the TF style (epsilon inside the square root)."
+    def __init__(self, hidden, variance_epsilon=1e-12):
+        super().__init__()
+        self.gamma = nn.Parameter(torch.ones(hidden), requires_grad=True)
+        self.beta = nn.Parameter(torch.zeros(hidden), requires_grad=True)
+        self.variance_epsilon = variance_epsilon
+
+    def forward(self, x):
+        u = x.mean(-1, keepdim=True)
+        s = (x - u).pow(2).mean(-1, keepdim=True)
+        x = (x - u) / torch.sqrt(s + self.variance_epsilon)
+        return self.gamma * x + self.beta
+        # return x
+
+class Embeddings(nn.Module):
+
+    def __init__(self, feature_num, seq_len, hidden):
+        super().__init__()
+
+        # factorized embedding
+        self.lin = nn.Linear(feature_num, hidden)
+        self.pos_embed = nn.Embedding(seq_len, hidden) # position embedding
+
+        self.norm = LayerNorm(hidden)
+
+    def forward(self, x):
+        seq_len = x.size(1)
+        pos = torch.arange(seq_len, dtype=torch.long, device=x.device)
+        pos = pos.unsqueeze(0).expand(x.size(0), seq_len) # (S,) -> (B, S)
+
+        # factorized embedding
+        e = self.lin(x)
+        e = self.norm(e)
+        e = e + self.pos_embed(pos)
+        return self.norm(e)
+
+
+class MultiProjection(nn.Module):
+    """ Multi-Headed Dot Product Attention """
+    def __init__(self, hidden):
+        super().__init__()
+        self.proj_q = nn.Linear(hidden, hidden)
+        self.proj_k = nn.Linear(hidden, hidden)
+        self.proj_v = nn.Linear(hidden, hidden)
+
+    def forward(self, x):
+        """
+        x, q(query), k(key), v(value) : (B(batch_size), S(seq_len), D(dim))
+        * split D(dim) into (H(n_heads), W(width of head)) ; D = H * W
+        """
+        # (B, S, D) -proj-> (B, S, D) -split-> (B, S, H, W) -trans-> (B, H, S, W)
+        q, k, v = self.proj_q(x), self.proj_k(x), self.proj_v(x)
+        return q, k, v
+
+def split_last(x, shape):
+    "split the last dimension to given shape"
+    shape = list(shape)
+    assert shape.count(-1) <= 1
+    if -1 in shape:
+        shape[shape.index(-1)] = x.size(-1) // -np.prod(shape)
+    return x.view(*x.size()[:-1], *shape)
+
+
+def merge_last(x, n_dims):
+    "merge the last n_dims to a dimension"
+    s = x.size()
+    assert n_dims > 1 and n_dims < len(s)
+    return x.view(*s[:-n_dims], -1)
+
+class MultiHeadedSelfAttention(nn.Module):
+    """ Multi-Headed Dot Product Attention """
+    def __init__(self, hidden, n_heads=4):
+        super().__init__()
+        self.proj_q = nn.Linear(hidden, hidden)
+        self.proj_k = nn.Linear(hidden, hidden)
+        self.proj_v = nn.Linear(hidden, hidden)
+        # self.drop = nn.Dropout(p_drop_attn)
+        self.scores = None # for visualization
+        self.n_heads = n_heads
+
+    def forward(self, x):
+        """
+        x, q(query), k(key), v(value) : (B(batch_size), S(seq_len), D(dim))
+        * split D(dim) into (H(n_heads), W(width of head)) ; D = H * W
+        """
+        # (B, S, D) -proj-> (B, S, D) -split-> (B, S, H, W) -trans-> (B, H, S, W)
+        q, k, v = self.proj_q(x), self.proj_k(x), self.proj_v(x)
+        q, k, v = (split_last(x, (self.n_heads, -1)).transpose(1, 2)
+                   for x in [q, k, v])
+        # (B, H, S, W) @ (B, H, W, S) -> (B, H, S, S) -softmax-> (B, H, S, S)
+        scores = q @ k.transpose(-2, -1) / np.sqrt(k.size(-1))
+        #scores = self.drop(F.softmax(scores, dim=-1))
+        scores = F.softmax(scores, dim=-1)
+        # (B, H, S, S) @ (B, H, S, W) -> (B, H, S, W) -trans-> (B, S, H, W)
+        h = (scores @ v).transpose(1, 2).contiguous()
+        # -merge-> (B, S, D)
+        h = merge_last(h, 2)
+        self.scores = scores
+        return h
+
+
+class PositionWiseFeedForward(nn.Module):
+    """ FeedForward Neural Networks for each position """
+    def __init__(self, hidden, hidden_ff):
+        super().__init__()
+        self.fc1 = nn.Linear(hidden, hidden_ff)
+        self.fc2 = nn.Linear(hidden_ff, hidden)
+
+    def forward(self, x):
+        # (B, S, D) -> (B, S, D_ff) -> (B, S, D)
+        return self.fc2(gelu(self.fc1(x)))
+
+
+class Transformer(nn.Module):
+    """ Transformer with Self-Attentive Blocks"""
+    def __init__(self, feature_num, seq_len, hidden, hidden_ff, n_layers, n_heads):
+        super().__init__()
+        self.embed = Embeddings(feature_num, seq_len, hidden)
+        # Original BERT not used parameter-sharing strategies
+        # self.blocks = nn.ModuleList([Block(cfg) for _ in range(n_layers)])
+
+        # To used parameter-sharing strategies
+        self.n_layers = n_layers
+        self.attn = MultiHeadedSelfAttention(hidden, n_heads)
+        self.proj = nn.Linear(hidden, hidden)
+        self.norm1 = LayerNorm(hidden)
+        self.pwff = PositionWiseFeedForward(hidden, hidden_ff)
+        self.norm2 = LayerNorm(hidden)
+        # self.drop = nn.Dropout(p_drop_hidden)
+
+    def forward(self, x):
+        h = self.embed(x)
+
+        for _ in range(self.n_layers):
+            # h = block(h, mask)
+            h = self.attn(h)
+            h = self.norm1(h + self.proj(h))
+            h = self.norm2(h + self.pwff(h))
+        return h
+
+class LIMUBertEncoder(nn.Module):
+
+    def __init__(self, feature_num=6, seq_len=120, hidden=72, hidden_ff=144, n_layers=4, n_heads=4):
+        super().__init__()
+        self.transformer = Transformer(feature_num, seq_len, hidden, hidden_ff, n_layers, n_heads) # encoder
+
+    def forward(self, input_seqs):
+        h_masked = self.transformer(input_seqs)
+        return h_masked
 
 # Copied from transformers.models.bart.modeling_bart._make_causal_mask
 def _make_causal_mask(
@@ -595,8 +751,8 @@ class LlamaModel(LlamaPreTrainedModel):
         self.layers = nn.ModuleList([LlamaDecoderLayer(config) for _ in range(config.num_hidden_layers)])
         self.norm = LlamaRMSNorm(config.hidden_size, eps=config.rms_norm_eps)
 
-        self.audio_encoder = CAVMAEFTAudio()
-        self.audio_proj = nn.Sequential(nn.LayerNorm(768, elementwise_affine=False), nn.Linear(768, config.hidden_size))
+        self.imu_encoder = LIMUBertEncoder()
+        self.imu_proj = nn.Sequential(nn.LayerNorm(72, elementwise_affine=False), nn.Linear(72, config.hidden_size))
 
         self.gradient_checkpointing = False
         # Initialize weights and apply final processing
@@ -620,12 +776,14 @@ class LlamaModel(LlamaPreTrainedModel):
                 device=inputs_embeds.device,
                 past_key_values_length=past_key_values_length,
             )
+            # print(f'{combined_attention_mask.shape=}')
 
         if attention_mask is not None:
             # [bsz, seq_len] -> [bsz, 1, tgt_seq_len, src_seq_len]
             expanded_attn_mask = _expand_mask(attention_mask, inputs_embeds.dtype, tgt_len=input_shape[-1]).to(
                 inputs_embeds.device
-            )
+            ) # [B, 1, 136, 4096]
+            # print(f'{expanded_attn_mask.shape=}')
             combined_attention_mask = (
                 expanded_attn_mask if combined_attention_mask is None else expanded_attn_mask + combined_attention_mask
             )
@@ -636,7 +794,7 @@ class LlamaModel(LlamaPreTrainedModel):
     def forward(
         self,
         input_ids: torch.LongTensor = None,
-        audio_input = None,
+        imu_input = None,
         attention_mask: Optional[torch.Tensor] = None,
         position_ids: Optional[torch.LongTensor] = None,
         past_key_values: Optional[List[torch.FloatTensor]] = None,
@@ -664,31 +822,33 @@ class LlamaModel(LlamaPreTrainedModel):
         else:
             raise ValueError("You have to specify either decoder_input_ids or decoder_inputs_embeds")
 
-        # project the audio to same dimension with text
-        if audio_input != None: # [B, t, f]
-            audio_input = self.audio_encoder(audio_input)  # [B, 512, 768]
-            assert audio_input.shape[1] == 8 * 64
-            audio_input = audio_input.reshape(audio_input.shape[0], 8, 64, audio_input.shape[-1])
-            audio_input = torch.mean(audio_input, dim=1)  # mean pool over the frequency dimension # [B, 64, 768]
-            audio_input = torch.nn.functional.avg_pool2d(audio_input, (2, 1)) #[B, 32, 4096]
-            # hard norm to 50
-            audio_input = audio_input / 50
-            audio_input = self.audio_proj(audio_input) #[B, 32, 4096]
-            audio_length = audio_input.shape[1]
+        # project the IMU to same dimension with text # todo::
+        if imu_input != None: # [B, window, geo+acc], [B, 120, 6]
+            imu_input = self.imu_encoder(imu_input) # [B, 120, 72]
+            # print(f'{imu_input.shape=}')
+            assert imu_input.shape[1] == 4 * 30 # the original paper use 8 to batch and pooling
+            imu_input = imu_input.reshape(imu_input.shape[0], 4, 30, imu_input.shape[-1])
+            imu_input = torch.mean(imu_input, dim=1)  # mean pool over the frequency dimension # [B, 30, 72]
+            imu_input = torch.nn.functional.avg_pool2d(imu_input, (2, 1)) #[B, 15, 72]
+            # ? hard norm to 50 
+            imu_input = imu_input / 50 # magic number
+            imu_input = self.imu_proj(imu_input) #[B, 15, 4096]
+            # print(f'{imu_input.shape=}')
+            imu_length = imu_input.shape[1] # 15
         else:
-            audio_length = 0
+            imu_length = 0
 
-        # all audio and text length together
-        seq_length = audio_length + seq_length # [B, length, 1280]
-
-        seq_length_with_past = seq_length
+        # all IMU and text length together
+        seq_length = imu_length + seq_length # 15+104
+        # print(f'{seq_length=}')
+        seq_length_with_past = seq_length # 15+104
         past_key_values_length = 0
 
         if past_key_values is not None:
             past_key_values_length = past_key_values[0][0].shape[2]
             seq_length_with_past = seq_length_with_past + past_key_values_length
-
-        # requires audio + text length here
+        # print(f'{seq_length_with_past=}')
+        # requires IMU + text length here
         if position_ids is None:
             device = input_ids.device if input_ids is not None else inputs_embeds.device
             # the pos_ids length already include audio
@@ -701,20 +861,26 @@ class LlamaModel(LlamaPreTrainedModel):
 
         # convert id to embedding
         if inputs_embeds is None:
-            inputs_embeds = self.embed_tokens(input_ids)
-        if audio_input != None:
-            if audio_input.device == inputs_embeds.device:
-                inputs_embeds = torch.concat([audio_input, inputs_embeds], dim=1)  # [2, 25+96, 4096]
+            # print(f'{input_ids.shape=}')
+            # input_ids [B, 104]
+            inputs_embeds = self.embed_tokens(input_ids) # [B, 104, 4096]
+            # print(f'{inputs_embeds.shape=}')
+        if imu_input != None:
+            if imu_input.device == inputs_embeds.device:
+                inputs_embeds = torch.concat([imu_input, inputs_embeds], dim=1)  # [B, 15+104, 4096]
             else:
-                inputs_embeds = torch.concat([audio_input, inputs_embeds.to(audio_input.device)], dim=1)  # [2, 25+96, 4096]
+                inputs_embeds = torch.concat([imu_input, inputs_embeds.to(imu_input.device)], dim=1)  # [B, 15+104, 4096]
 
         # embed positions
         # attention mask need to change, should unmask the audio part and entend the length accordingly
-        if attention_mask is None:
+        if attention_mask is None: # it's not None [B, 136] error
             # all unmasked, this should be correct as seq_length_with_past already contains audio_length
+            # print(f'{seq_length_with_past=}')
             attention_mask = torch.ones(
                 (batch_size, seq_length_with_past), dtype=torch.bool, device=inputs_embeds.device
             )
+        
+        # print(f'{attention_mask.shape=}')
 
         attention_mask = self._prepare_decoder_attention_mask(
             attention_mask, (batch_size, seq_length), inputs_embeds, past_key_values_length
@@ -737,7 +903,7 @@ class LlamaModel(LlamaPreTrainedModel):
         for idx, decoder_layer in enumerate(self.layers):
             if output_hidden_states:
                 # only output text related states
-                all_hidden_states += (hidden_states[:, audio_length:, :],)
+                all_hidden_states += (hidden_states[:, imu_length:, :],)
 
             past_key_value = past_key_values[idx] if past_key_values is not None else None
 
@@ -776,7 +942,7 @@ class LlamaModel(LlamaPreTrainedModel):
 
         hidden_states = self.norm(hidden_states)
         # only output text related states
-        hidden_states = hidden_states[:, audio_length:, :]
+        hidden_states = hidden_states[:, imu_length:, :]
 
         # add hidden states from the last decoder layer
         if output_hidden_states:
@@ -828,7 +994,7 @@ class LlamaForCausalLM(LlamaPreTrainedModel):
     def forward(
         self,
         input_ids: torch.LongTensor = None,
-        audio_input=None,
+        imu_input=None,
         attention_mask: Optional[torch.Tensor] = None,
         position_ids: Optional[torch.LongTensor] = None,
         past_key_values: Optional[List[torch.FloatTensor]] = None,
@@ -874,7 +1040,7 @@ class LlamaForCausalLM(LlamaPreTrainedModel):
         # decoder outputs consists of (dec_features, layer_state, dec_hidden, dec_attn)
         outputs = self.model(
             input_ids=input_ids,
-            audio_input=audio_input,
+            imu_input=imu_input,
             attention_mask=attention_mask,
             position_ids=position_ids,
             past_key_values=past_key_values,
@@ -914,7 +1080,7 @@ class LlamaForCausalLM(LlamaPreTrainedModel):
         )
 
     def prepare_inputs_for_generation(
-        self, input_ids, audio_input, past_key_values=None, attention_mask=None, inputs_embeds=None, **kwargs
+        self, input_ids, imu_input, past_key_values=None, attention_mask=None, inputs_embeds=None, **kwargs
     ):
         if past_key_values:
             input_ids = input_ids[:, -1:]
@@ -932,7 +1098,7 @@ class LlamaForCausalLM(LlamaPreTrainedModel):
         if inputs_embeds is not None and past_key_values is None:
             model_inputs = {"inputs_embeds": inputs_embeds}
         else:
-            model_inputs = {"input_ids": input_ids, "audio_input": audio_input}
+            model_inputs = {"input_ids": input_ids, "imu_input": imu_input}
 
         model_inputs.update(
             {
