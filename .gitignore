@@ -12,3 +12,5 @@ old/*
 *.bin
 *.pt
 old/*
+.history/*
+.vscode/*
