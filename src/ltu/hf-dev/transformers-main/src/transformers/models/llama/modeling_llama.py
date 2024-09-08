@@ -752,8 +752,9 @@ class LlamaModel(LlamaPreTrainedModel):
         self.norm = LlamaRMSNorm(config.hidden_size, eps=config.rms_norm_eps)
 
         self.imu_encoder = LIMUBertEncoder()
-        self.imu_proj = nn.Sequential(nn.LayerNorm(72, elementwise_affine=False), nn.Linear(72, config.hidden_size))
+        # self.imu_proj = nn.Sequential(nn.LayerNorm(72, elementwise_affine=False), nn.Linear(72, config.hidden_size))
         # self.imu_proj = nn.Sequential(nn.Linear(72, config.hidden_size), nn.GELU(), nn.LayerNorm(config.hidden_size, elementwise_affine=False)) # LIMU-Bert style
+        self.imu_proj = nn.Sequential(nn.Linear(72, config.hidden_size), nn.GELU(), nn.Linear(config.hidden_size, config.hidden_size), nn.GELU(), nn.Linear(config.hidden_size, config.hidden_size)) # LLaVA mlp2x_gelu
 
         self.gradient_checkpointing = False
         # Initialize weights and apply final processing

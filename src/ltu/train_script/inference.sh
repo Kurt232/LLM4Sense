@@ -11,7 +11,7 @@
 
 export TRANSFORMERS_CACHE=./hf_cache/
 export HF_DATASETS_CACHE=./hf_cache/
-base_model='ltu_cla_p_10_1'
+base_model='llasa_stage2'
 output_dir="../eval_res/${base_model}.json"
 # cp "$0" ${output_dir}/$(date +"%Y-%m-%d-%H-%M-%S").sh
 

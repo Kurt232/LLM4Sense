@@ -15,6 +15,7 @@ import bitsandbytes as bnb
 
 from peft import (
     LoraConfig,
+    PeftModel,
     get_peft_model,
     get_peft_model_state_dict,
     prepare_model_for_int8_training,
@@ -56,7 +57,8 @@ def train(
     resume_from_checkpoint: str = None,  # either training checkpoint or final adapter
     prompt_template_name: str = "alpaca_short",  # The prompt template to use, will default to alpaca.
     save_steps: int = 100,
-    trainable_params = 'all'
+    trainable_params = 'all',
+    enable_lora = False,
 ):
     if int(os.environ.get("LOCAL_RANK", 0)) == 0:
         print(
@@ -82,7 +84,10 @@ def train(
             f"wandb_watch: {wandb_watch}\n"
             f"wandb_log_model: {wandb_log_model}\n"
             f"resume_from_checkpoint: {resume_from_checkpoint or False}\n"
-            f"prompt template: {prompt_template_name}\n"
+            f"prompt template: {prompt_template_name}\n",
+            f"save_steps: {save_steps}\n",
+            f"trainable_params: {trainable_params}\n",
+            f"enable_lora: {enable_lora}\n",
         )
     assert (
         base_model
@@ -119,13 +124,22 @@ def train(
         os.environ["WANDB_WATCH"] = wandb_watch
     if len(wandb_log_model) > 0:
         os.environ["WANDB_LOG_MODEL"] = wandb_log_model
-
-    model = LlamaForCausalLM.from_pretrained(
-        base_model,
-        load_in_8bit=False,
-        #torch_dtype=torch.float16,
-        device_map=device_map,
-    )
+        
+    if start_model != None and 'stage' in start_model:
+        model = LlamaForCausalLM.from_pretrained(
+            start_model,
+            load_in_8bit=False,
+            torch_dtype=torch.bfloat16,
+            device_map=device_map,
+        )
+        start_model = None # still need to load the encoder weights (llasa don't modify it)
+    else:    
+        model = LlamaForCausalLM.from_pretrained(
+            base_model,
+            load_in_8bit=False,
+            torch_dtype=torch.bfloat16,
+            device_map=device_map,
+        )
     
     if start_model == None and 'imu' in base_model:
         state_dict = model.state_dict()
@@ -141,7 +155,7 @@ def train(
 
         model.load_state_dict(temp_state_dict, strict=False)
 
-    tokenizer = LlamaTokenizer.from_pretrained(base_model)
+    tokenizer = LlamaTokenizer.from_pretrained('/data/wenhao/wjdu/pretrained_mdls/vicuna_imu1')
 
     tokenizer.pad_token_id = (
         0  # unk. we want this to be different from the eos token
@@ -190,16 +204,9 @@ def train(
             tokenized_full_prompt["labels"] = [-100] * user_prompt_len + tokenized_full_prompt["labels"][user_prompt_len:]  # could be sped up, probably
             # * masked the user_prompt
         return tokenized_full_prompt
-
-    config = LoraConfig(
-        r=lora_r,
-        lora_alpha=lora_alpha,
-        target_modules=lora_target_modules,
-        lora_dropout=lora_dropout,
-        bias="none",
-        task_type="CAUSAL_LM",
-    )
-    model = get_peft_model(model, config)
+    
+    # freeze the imu_encoder, imu_proj, and llama
+    model.model.requires_grad_(False)
     
     # for imu params, lora always trainable, llama always frozen
     for name, param in model.named_parameters():
@@ -212,6 +219,28 @@ def train(
                 param.requires_grad = True
                 #print(f"Parameter: {name}, requires_grad: {param.requires_grad}")
 
+    if enable_lora: # lora always trainable, llama always frozen
+        if start_model == None:
+            config = LoraConfig(
+                r=lora_r,
+                lora_alpha=lora_alpha,
+                target_modules=lora_target_modules,
+                lora_dropout=lora_dropout,
+                bias="none",
+                task_type="CAUSAL_LM",
+            )
+            model = get_peft_model(model, config)
+        else:
+            eval_mdl_path = start_model
+            encoder_weights = torch.load(os.path.join(eval_mdl_path, 'encoder_model.bin'), map_location='cpu')
+            proj_weights = torch.load(os.path.join(eval_mdl_path, 'proj_model.bin'), map_location='cpu')
+            model.model.imu_encoder.load_state_dict(encoder_weights)
+            model.model.imu_proj.load_state_dict(proj_weights)
+            model = PeftModel.from_pretrained(
+                    model=model,
+                    model_id=eval_mdl_path
+                )
+    
     if data_path.endswith(".json") or data_path.endswith(".jsonl"):
         data = load_dataset("json", data_files=data_path)
     else:
@@ -236,19 +265,9 @@ def train(
         else:
             print(f"Checkpoint {checkpoint_name} not found")
 
-    # now load from real checkpoint
-    # todo:: checkpoint don't save the encoder and proj model, need to save them separately
-    if start_model != None and (resume_from_checkpoint == None or resume_from_checkpoint == False):
-        # state_dict = torch.load(start_model, map_location='cpu')
-        # msg = model.load_state_dict(state_dict, strict=False)
-        # print('load checkpoint', msg)
-        model.load_adapter(start_model, 'default')
-        encoder_weights = torch.load(os.path.join(start_model, 'encoder_model.bin'), map_location='cpu')
-        model.model.model.imu_encoder.load_state_dict(encoder_weights, strict=False)
-        proj_weights = torch.load(os.path.join(start_model, 'proj_model.bin'), map_location='cpu')
-        model.model.model.imu_proj.load_state_dict(proj_weights, strict=False)
-
-    model.print_trainable_parameters()  # Be more transparent about the % of trainable params.
+    if enable_lora:
+        model.print_trainable_parameters()  # Be more transparent about the % of trainable params.
+        model.config.use_cache = False
 
     if val_set_size > 0:
         train_val = data["train"].train_test_split(
@@ -300,14 +319,20 @@ def train(
             tokenizer, pad_to_multiple_of=8, return_tensors="pt", padding=True
         ),
     )
-    model.config.use_cache = False
+    
     trainer.train(resume_from_checkpoint=resume_from_checkpoint)
 
     model.save_pretrained(output_dir)
-    imu_encoder_state_dict = model.model.model.imu_encoder.state_dict()
-    imu_proj_state_dict = model.model.model.imu_proj.state_dict()
-    torch.save(imu_encoder_state_dict, os.path.join(output_dir, 'encoder_model.bin'))
-    torch.save(imu_proj_state_dict, os.path.join(output_dir, 'proj_model.bin'))
+    if enable_lora:    
+        imu_encoder_state_dict = model.model.model.imu_encoder.state_dict()
+        imu_proj_state_dict = model.model.model.imu_proj.state_dict()
+        torch.save(imu_encoder_state_dict, os.path.join(output_dir, 'encoder_model.bin'))
+        torch.save(imu_proj_state_dict, os.path.join(output_dir, 'proj_model.bin'))
+    else:
+        imu_encoder_state_dict = model.model.imu_encoder.state_dict()
+        imu_proj_state_dict = model.model.imu_proj.state_dict()
+        torch.save(imu_encoder_state_dict, os.path.join(output_dir, 'encoder_model.bin'))
+        torch.save(imu_proj_state_dict, os.path.join(output_dir, 'proj_model.bin'))
 
 if __name__ == "__main__":
     fire.Fire(train)
