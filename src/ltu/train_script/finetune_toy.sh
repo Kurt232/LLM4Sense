@@ -12,13 +12,13 @@
 export TRANSFORMERS_CACHE=./hf_cache/
 export HF_DATASETS_CACHE=./hf_cache/
 num_epochs=10
-output_dir='/data/wenhao/wjdu/output/llasa_stage2/'
+output_dir='/data/wenhao/wjdu/output/lla_cla_10_1_n_1/'
 mkdir -p $output_dir
 cp "$0" ${output_dir}/$(date +"%Y-%m-%d-%H-%M-%S").sh
 
 CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nproc_per_node=4 --master_port=2237 ../finetune.py \
-    --base_model '/data/wenhao/wjdu/output/llasa_stage1/' \
-    --data_path '/data/wenhao/wjdu/openaqa/data/hhar/train_pure_cla.json' \
+    --base_model '/data/wenhao/wjdu/pretrained_mdls/vicuna_imu1/' \
+    --data_path '/data/wenhao/wjdu/openaqa/data/hhar_norm/train_pure_cla.json' \
     --output_dir $output_dir \
     --batch_size 256 \
     --micro_batch_size 4 \
@@ -33,8 +33,8 @@ CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nproc_per_node=4 --master_port=2237 ../f
     --train_on_inputs \
     --group_by_length \
     --wandb_run_name ${output_dir} \
-    --save_steps 20 \
-    --trainable_params proj \
+    --save_steps 200 \
+    --trainable_params all \
     --enable_lora True \
 
 # setting enable_lora as true will fine-tune the llm

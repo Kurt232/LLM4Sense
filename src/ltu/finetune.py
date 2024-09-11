@@ -206,7 +206,7 @@ def train(
         return tokenized_full_prompt
     
     # freeze the imu_encoder, imu_proj, and llama
-    model.model.requires_grad_(False)
+    # model.model.requires_grad_(False)
     
     # for imu params, lora always trainable, llama always frozen
     for name, param in model.named_parameters():
