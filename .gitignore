@@ -14,3 +14,7 @@ old/*
 old/*
 .history/*
 .vscode/*
+
+hf_cache/
+wandb/
+*.npy
